@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import "./globals.css";
 import Link from "next/link";
+import Providers from "./providers";
 
 export const metadata = {
   title: "SME Booking App",
@@ -12,6 +13,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="min-h-screen flex flex-col bg-slate-50 text-slate-900">
         {/* Sticky Header */}
+        <Providers>
         <header className="sticky top-0 z-50 bg-slate-900 text-white shadow-lg">
           <div className="max-w-6xl mx-auto px-4 py-4 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -98,6 +100,7 @@ export default function RootLayout({ children }) {
             © {new Date().getFullYear()} SME Booking App. All rights reserved.
           </div>
         </footer>
+        </Providers>
       </body>
     </html>
   );
